@@ -1,0 +1,9 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-blue-900">
+    <StackLayout class="p-8 items-center justify-center h-full">
+        <Label text="BRICK BREAKER" class="text-4xl font-bold mb-12 text-white"/>
+        
+        <Button text="Start Game" tap="{{ onStartGame }}" class="w-64 h-16 bg-green-500 text-white text-xl rounded-lg mb-4"/>
+        <Button text="High Scores" tap="{{ onHighScores }}" class="w-64 h-16 bg-yellow-500 text-white text-xl rounded-lg mb-4"/>
+        <Button text="Settings" tap="{{ onSettings }}" class="w-64 h-16 bg-purple-500 text-white text-xl rounded-lg"/>
+    </StackLayout>
+</Page>

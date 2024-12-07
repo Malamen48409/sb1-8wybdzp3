@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-blue-900">
+    <GridLayout rows="auto, *, auto" class="p-4">
+        <!-- Game Stats -->
+        <GridLayout row="0" columns="*, *, *" class="mb-4">
+            <Label col="0" text="{{ 'Lives: ' + lives }}" class="text-white text-lg"/>
+            <Label col="1" text="{{ 'Level: ' + level }}" class="text-white text-lg text-center"/>
+            <Label col="2" text="{{ 'Score: ' + score }}" class="text-white text-lg text-right"/>
+        </GridLayout>
+
+        <!-- Game Canvas -->
+        <ContentView row="1" id="gameCanvas" class="bg-black">
+            <AbsoluteLayout id="gameContainer" pan="{{ onPanPaddle }}">
+                <!-- Game objects will be bound here -->
+            </AbsoluteLayout>
+        </ContentView>
+
+        <!-- Controls -->
+        <StackLayout row="2" orientation="horizontal" class="justify-center mt-4">
+            <Button text="Pause" tap="{{ onPause }}" class="w-32 bg-yellow-500 text-white rounded-lg mr-4"/>
+            <Button text="Reset" tap="{{ onReset }}" class="w-32 bg-red-500 text-white rounded-lg"/>
+        </StackLayout>
+    </GridLayout>
+</Page>

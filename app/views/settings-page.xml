@@ -1,0 +1,19 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo" class="bg-blue-900">
+    <StackLayout class="p-8">
+        <Label text="SETTINGS" class="text-3xl font-bold text-white text-center mb-8"/>
+        
+        <GridLayout rows="auto, auto, auto" columns="*, auto" class="mb-4">
+            <Label row="0" col="0" text="Sound Effects" class="text-white text-lg"/>
+            <Switch row="0" col="1" checked="{{ soundEnabled }}" />
+            
+            <Label row="1" col="0" text="Music" class="text-white text-lg"/>
+            <Switch row="1" col="1" checked="{{ musicEnabled }}" />
+            
+            <Label row="2" col="0" text="Vibration" class="text-white text-lg"/>
+            <Switch row="2" col="1" checked="{{ vibrationEnabled }}" />
+        </GridLayout>
+        
+        <Button text="Back to Menu" tap="{{ onBackToMenu }}" 
+                class="bg-purple-500 text-white rounded-lg mt-4"/>
+    </StackLayout>
+</Page>
